@@ -9,6 +9,8 @@ collections:
   label_singular: 'Post'
   folder: content/posts
   create: true
+  editor:
+    preview: false
   path: '{{slug}}/index'
   media_folder: ''
   public_folder: ''
@@ -19,3 +21,6 @@ collections:
     - label: 'Cover Image'
       name: 'image'
       widget: 'image'
+    - label: Body
+      name: body
+      widget: markdown
