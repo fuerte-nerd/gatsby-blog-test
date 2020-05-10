@@ -11,7 +11,8 @@ collections:
   create: true
   editor:
     preview: false
-  path: '{{year}}-{{month}}-{{day}}-{{slug}}/index'
+  slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+  path: '{{slug}}/index'
   media_folder: ''
   public_folder: ''
   fields:
