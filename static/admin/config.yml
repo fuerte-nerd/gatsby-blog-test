@@ -4,15 +4,17 @@ backend:
 media_folder: static/media
 public_folder: media
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "content/blog"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    editor:
-     preview: false
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+- name: posts
+  label: Posts
+  label_singular: 'Post'
+  folder: content/posts
+  path: '{{slug}}/index'
+  media_folder: ''
+  public_folder: ''
+  fields:
+    - label: Title
+      name: title
+      widget: string
+    - label: 'Cover Image'
+      name: 'image'
+      widget: 'image'
